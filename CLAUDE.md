@@ -6,11 +6,42 @@
 
 ## 技術スタック
 
-（プロジェクト初期化後に更新してください）
+- **フレームワーク**: React 18
+- **ビルドツール**: Vite 5
+- **言語**: JavaScript (JSX)
+- **スタイリング**: plain CSS（CSS Modules不使用）
+- **状態管理**: React useState / useEffect（外部ライブラリなし）
+- **永続化**: localStorage
 
 ## ディレクトリ構成
 
-（プロジェクト初期化後に更新してください）
+```
+task-board/
+├── src/
+│   ├── main.jsx      # エントリーポイント
+│   ├── App.jsx       # ルートコンポーネント
+│   ├── App.css       # App コンポーネントのスタイル
+│   └── index.css     # グローバルスタイル
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # GitHub Pages 自動デプロイ
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+## コンポーネント命名規約
+
+- コンポーネント名は **PascalCase**（例: `TaskItem`, `AddTaskForm`）
+- ファイル名はコンポーネント名と一致させる（例: `TaskItem.jsx`）
+- コンポーネントファイルは `src/` 直下に置く（現状規模のため）
+
+## デプロイ先
+
+https://walfinthnk.github.io/task-board/
+
+- `main` ブランチへのプッシュで GitHub Actions が自動ビルド＆デプロイ
+- ワークフロー: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
 
 ## 開発コマンド
 
